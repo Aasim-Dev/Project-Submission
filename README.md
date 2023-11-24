@@ -1,4 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DegreeDrift
+
+Welcome to DegreeDrift – Your Ultimate Final Year Project Management System!
+
+## Overview
+
+DegreeDrift is an automated project submission and management system designed to streamline the final year project process for engineering students. This platform simplifies the submission, tracking, and evaluation of projects across various departments and domains.
+
+## Features
+
+- **User Authentication:** Secure access for students, coordinators, and guides.
+- **Project Management:** Efficiently organize projects by department, domain, and guide.
+- **Task Tracking:** Monitor project progress with detailed task tracking and timestamped updates.
+- **File Upload and Download:** Seamlessly upload project files and download resources.
+- **Database Schema:** A well-structured MongoDB schema to handle project, student, and task data.
+- **Responsive Design:** A user-friendly interface that adapts to different screen sizes.
+
+## Tech Stack
+
+- **Frontend:** [Next.js](https://nextjs.org/), [React](https://reactjs.org/), [Bootstrap]
+- **Backend:** [Node.js](https://nodejs.org/), [Express](https://expressjs.com/), [MongoDB](https://www.mongodb.com/)
+- **File Handling:** [Multer](https://www.npmjs.com/package/multer)
+- **Authentication:** [JSON Web Tokens (JWT)](https://jwt.io/)
+
+## Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/DegreeDrift.git
+
 
 ## Getting Started
 
