@@ -5,12 +5,13 @@ import Image from "next/image"
 import Univ from "../public/university.png"
 
 const CollegeList = () => {
+    const apiUrl = process.env.API_URL;
     const [colleges, setColleges] = useState([]);
 
     useEffect(() => {
         const getColleges = async () => {
             try {
-                const res = await fetch(`http://localhost:3000/api/colleges`, {
+                const res = await fetch(`${apiUrl}/api/colleges`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {

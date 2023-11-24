@@ -7,13 +7,13 @@ import Link from 'next/link';
 
 
 const Notifications = () => {
-
+    const apiUrl = process.env.API_URL;
     const [notifyList, setNotifyList] = useState([]);
 
     useEffect(() => {
         const getnotifications = async () => {
             try {
-                const res = await fetch(`http://localhost:3000/api/notification`, {
+                const res = await fetch(`${apiUrl}/api/notification`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {

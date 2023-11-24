@@ -6,7 +6,7 @@ import Swal from 'sweetalert2'
 const AddStudentByProject = ({ params }) => {
 
     const { id } = params;
-
+    const apiUrl = process.env.API_URL;
 
     const [projectList, setProjectList] = useState([]);
     const [student_name, setStudentName] = useState('');
@@ -19,7 +19,7 @@ const AddStudentByProject = ({ params }) => {
     useEffect(() => {
         const getProject = async () => {
             try {
-                const res = await fetch(`http://localhost:3000/api/project/${id}`, {
+                const res = await fetch(`${apiUrl}/api/project/${id}`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -57,7 +57,7 @@ const AddStudentByProject = ({ params }) => {
         }
 
         try {
-            const res = await fetch("http://localhost:3000/api/student", {
+            const res = await fetch(`${apiUrl}/api/student`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
@@ -89,7 +89,7 @@ const AddStudentByProject = ({ params }) => {
                     <div className="text-center mb-5">
                         <div className="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i className="bi bi-envelope"></i></div>
                         <h1 className="fw-bolder">Add Student</h1>
-                        <p className="lead fw-normal text-muted mb-0">Let's work together!</p>
+                        <p className="lead fw-normal text-muted mb-0">Let&apos;s work together!</p>
                     </div>
                     <div className="row gx-5 justify-content-center">
                         <div className="col-lg-8 col-xl-6">

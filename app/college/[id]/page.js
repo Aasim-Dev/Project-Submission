@@ -6,14 +6,15 @@ import Link from 'next/link';
 import Image from "next/image"
 import Univ from "../../../public/university1.png"
 
-const showDepartments = ({ params }) => {
+const ShowDepartments = ({ params }) => {
     const [department, setdepartment] = useState([]);
     const { id } = params;
+    const apiUrl = process.env.API_URL;
 
     useEffect(() => {
         const getDept = async (id) => {
             try {
-                const res = await fetch(`http://localhost:3000/api/department/${id}/detail`, {
+                const res = await fetch(`${apiUrl}/api/department/${id}/detail`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -69,4 +70,4 @@ const showDepartments = ({ params }) => {
     )
 }
 
-export default showDepartments
+export default ShowDepartments

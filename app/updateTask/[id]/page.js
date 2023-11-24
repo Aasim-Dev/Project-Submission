@@ -6,7 +6,9 @@ import Swal from 'sweetalert2'
 
 
 const UpdateTask = ({ params }) => {
+
     const { id } = params;
+    const apiUrl = process.env.API_URL;
 
 
     const [newActivity, setNewActivity] = useState('');
@@ -17,7 +19,7 @@ const UpdateTask = ({ params }) => {
     useEffect(() => {
         const getTaskById = async (id) => {
             try {
-                const res = await fetch(`http://localhost:3000/api/task/${id}`, {
+                const res = await fetch(`${apiUrl}/api/task/${id}`, {
                     cache: "no-store",
                 });
 
@@ -54,7 +56,7 @@ const UpdateTask = ({ params }) => {
         const currentTime = new Date().toISOString();
         setNewTime(currentTime)
         try {
-            const res = await fetch(`http://localhost:3000/api/task/${id}`, {
+            const res = await fetch(`${apiUrl}/api/task/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
@@ -88,7 +90,7 @@ const UpdateTask = ({ params }) => {
                     <div className="text-center mb-5">
                         <div className="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i className="bi bi-envelope"></i></div>
                         <h1 className="fw-bolder">Update Project Status</h1>
-                        <p className="lead fw-normal text-muted mb-0">Let's work together!</p>
+                        <p className="lead fw-normal text-muted mb-0">Let&apos;s work together!</p>
                     </div>
                     <div className="row gx-5 justify-content-center">
                         <div className="col-lg-8 col-xl-6">

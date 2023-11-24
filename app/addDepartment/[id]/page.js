@@ -5,7 +5,7 @@ import Swal from 'sweetalert2'
 
 const AddDepartmentByCollege = ({ params }) => {
     const { id } = params;
-
+    const apiUrl = process.env.API_URL;
     const [colleges, setColleges] = useState('');
     const [department_name, setDepartmentName] = useState('');
     const [selectedCollegeId, setSelectedCollegeId] = useState('');
@@ -14,7 +14,7 @@ const AddDepartmentByCollege = ({ params }) => {
     useEffect(() => {
         const getColleges = async (id) => {
             try {
-                const res = await fetch(`http://localhost:3000/api/colleges/${id}`, {
+                const res = await fetch(`${apiUrl}/api/colleges/${id}`, {
 
                     cache: 'no-store',
                 })
@@ -53,7 +53,7 @@ const AddDepartmentByCollege = ({ params }) => {
         }
 
         try {
-            const res = await fetch("http://localhost:3000/api/department", {
+            const res = await fetch(`${apiUrl}/api/department`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
@@ -84,7 +84,7 @@ const AddDepartmentByCollege = ({ params }) => {
                     <div className="text-center mb-5">
                         <div className="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i className="bi bi-envelope"></i></div>
                         <h1 className="fw-bolder">Add Your Department</h1>
-                        <p className="lead fw-normal text-muted mb-0">Let's work together!</p>
+                        <p className="lead fw-normal text-muted mb-0">Let&apos;s work together!</p>
                     </div>
                     <div className="row gx-5 justify-content-center">
                         <div className="col-lg-8 col-xl-6">

@@ -6,7 +6,7 @@ import Loading from "../../loading"
 
 const Department = ({ params }) => {
     const { id } = params;
-
+    const apiUrl = process.env.API_URL;
     const [projectList, setProjectList] = useState([]);
     const [guideList, setGuideList] = useState([]);
     const [coord, setCoord] = useState('');
@@ -19,7 +19,7 @@ const Department = ({ params }) => {
     useEffect(() => {
         const getDept = async (id) => {
             try {
-                const res = await fetch(`http://localhost:3000/api/department/${id}`, {
+                const res = await fetch(`${apiUrl}/api/department/${id}`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -35,7 +35,7 @@ const Department = ({ params }) => {
         }
         const getCord = async (id) => {
             try {
-                const res = await fetch(`http://localhost:3000/api/projectcoordinator/${id}`, {
+                const res = await fetch(`${apiUrl}/api/projectcoordinator/${id}`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -50,7 +50,7 @@ const Department = ({ params }) => {
 
         const getHod = async (id) => {
             try {
-                const res = await fetch(`http://localhost:3000/api/hod/${id}`, {
+                const res = await fetch(`${apiUrl}/api/hod/${id}`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -65,7 +65,7 @@ const Department = ({ params }) => {
 
         const getProjects = async (id) => {
             try {
-                const res = await fetch(`http://localhost:3000/api/project/${id}/detail`, {
+                const res = await fetch(`${apiUrl}/api/project/${id}/detail`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -81,7 +81,7 @@ const Department = ({ params }) => {
 
         const getGuides = async (id) => {
             try {
-                const res = await fetch(`http://localhost:3000/api/projectguide`, {
+                const res = await fetch(`${apiUrl}/api/projectguide`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {

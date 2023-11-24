@@ -4,6 +4,7 @@ import Swal from 'sweetalert2'
 import { useRouter } from "next/navigation";
 
 function AddCollege() {
+    const apiUrl = process.env.API_URL;
     const [college_name, setCollegeName] = useState("");
 
     const router = useRouter();
@@ -21,7 +22,7 @@ function AddCollege() {
         }
 
         try {
-            const res = await fetch("http://localhost:3000/api/colleges", {
+            const res = await fetch(`http://localhost:3000/api/colleges`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
@@ -52,7 +53,7 @@ function AddCollege() {
                     <div className="text-center mb-5">
                         <div className="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i className="bi bi-envelope"></i></div>
                         <h1 className="fw-bolder">Add Your College</h1>
-                        <p className="lead fw-normal text-muted mb-0">Let's work together!</p>
+                        <p className="lead fw-normal text-muted mb-0">Let&apos;s work together!</p>
                     </div>
                     <div className="row gx-5 justify-content-center">
                         <div className="col-lg-8 col-xl-6">

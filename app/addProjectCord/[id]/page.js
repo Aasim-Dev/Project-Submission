@@ -7,6 +7,7 @@ import React from 'react'
 
 const AddCordByDept = ({ params }) => {
     const { id } = params;
+    const apiUrl = process.env.API_URL;
     const [deptList, setDeptList] = useState('');
     const [coordinator_name, setProjectCordName] = useState('');
     const [selectedDept, setSelectedDept] = useState('');
@@ -16,7 +17,7 @@ const AddCordByDept = ({ params }) => {
     useEffect(() => {
         const getDept = async (id) => {
             try {
-                const res = await fetch(`http://localhost:3000/api/department/${id}`, {
+                const res = await fetch(`${apiUrl}/api/department/${id}`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -54,7 +55,7 @@ const AddCordByDept = ({ params }) => {
         }
 
         try {
-            const res = await fetch("http://localhost:3000/api/projectcoordinator", {
+            const res = await fetch(`${apiUrl}/api/projectcoordinator`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
@@ -85,7 +86,7 @@ const AddCordByDept = ({ params }) => {
                     <div className="text-center mb-5">
                         <div className="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i className="bi bi-envelope"></i></div>
                         <h1 className="fw-bolder">Add Project Coordinator </h1>
-                        <p className="lead fw-normal text-muted mb-0">Let's work together!</p>
+                        <p className="lead fw-normal text-muted mb-0">Let&apos;s work together!</p>
                     </div>
                     <div className="row gx-5 justify-content-center">
                         <div className="col-lg-8 col-xl-6">

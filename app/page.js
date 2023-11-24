@@ -15,7 +15,7 @@ export default function Home() {
             <div className="col-lg-8 col-xxl-6">
               <div className="text-center my-5">
                 <h1 className="fw-bolder mb-3"> Elevate your final year project experience and leave a lasting mark on the world of engineering.</h1>
-                <p className="lead fw-normal text-muted mb-4">Let's start by getting your institution onboard.</p>
+                <p className="lead fw-normal text-muted mb-4">Let&apos;s start by getting your institution onboard.</p>
                 <Link className="btn btn-primary btn-lg" href={`/addCollege`}>Get Started</Link>
               </div>
             </div>
