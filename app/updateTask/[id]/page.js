@@ -19,7 +19,7 @@ const UpdateTask = ({ params }) => {
     useEffect(() => {
         const getTaskById = async (id) => {
             try {
-                const res = await fetch(`${apiUrl}/api/task/${id}`, {
+                const res = await fetch(`/api/task/${id}`, {
                     cache: "no-store",
                 });
 
@@ -56,7 +56,7 @@ const UpdateTask = ({ params }) => {
         const currentTime = new Date().toISOString();
         setNewTime(currentTime)
         try {
-            const res = await fetch(`${apiUrl}/api/task/${id}`, {
+            const res = await fetch(`/api/task/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",

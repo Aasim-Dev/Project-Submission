@@ -17,7 +17,7 @@ const AddTaskByProject = ({ params }) => {
     useEffect(() => {
         const getProject = async () => {
             try {
-                const res = await fetch(`${apiUrl}/api/project/${id}`, {
+                const res = await fetch(`/api/project/${id}`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -56,7 +56,7 @@ const AddTaskByProject = ({ params }) => {
         }
 
         try {
-            const res = await fetch(`${apiUrl}/api/task`, {
+            const res = await fetch(`/api/task`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",

@@ -17,7 +17,7 @@ const AddCordByDept = ({ params }) => {
     useEffect(() => {
         const getDept = async (id) => {
             try {
-                const res = await fetch(`${apiUrl}/api/department/${id}`, {
+                const res = await fetch(`/api/department/${id}`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -55,7 +55,7 @@ const AddCordByDept = ({ params }) => {
         }
 
         try {
-            const res = await fetch(`${apiUrl}/api/projectcoordinator`, {
+            const res = await fetch(`/api/projectcoordinator`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",

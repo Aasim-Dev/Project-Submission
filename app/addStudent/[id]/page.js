@@ -19,7 +19,7 @@ const AddStudentByProject = ({ params }) => {
     useEffect(() => {
         const getProject = async () => {
             try {
-                const res = await fetch(`${apiUrl}/api/project/${id}`, {
+                const res = await fetch(`/api/project/${id}`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -57,7 +57,7 @@ const AddStudentByProject = ({ params }) => {
         }
 
         try {
-            const res = await fetch(`${apiUrl}/api/student`, {
+            const res = await fetch(`/api/student`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",

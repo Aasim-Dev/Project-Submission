@@ -17,7 +17,7 @@ const AddProjectByDept = ({ params }) => {
     useEffect(() => {
         const getDept = async (id) => {
             try {
-                const res = await fetch(`${apiUrl}/api/department/${id}`, {
+                const res = await fetch(`/api/department/${id}`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -32,7 +32,7 @@ const AddProjectByDept = ({ params }) => {
         }
         const getGuide = async (id) => {
             try {
-                const res = await fetch(`${apiUrl}/api/projectguide/${id}/detail`, {
+                const res = await fetch(`/api/projectguide/${id}/detail`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -70,7 +70,7 @@ const AddProjectByDept = ({ params }) => {
         }
 
         try {
-            const res = await fetch(`${apiUrl}/api/project`, {
+            const res = await fetch(`/api/project`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",

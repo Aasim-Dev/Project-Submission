@@ -22,7 +22,7 @@ function AddCollege() {
         }
 
         try {
-            const res = await fetch(`http://localhost:3000/api/colleges`, {
+            const res = await fetch(`/api/colleges`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",

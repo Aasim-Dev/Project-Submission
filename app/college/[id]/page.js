@@ -14,7 +14,7 @@ const ShowDepartments = ({ params }) => {
     useEffect(() => {
         const getDept = async (id) => {
             try {
-                const res = await fetch(`${apiUrl}/api/department/${id}/detail`, {
+                const res = await fetch(`/api/department/${id}/detail`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {

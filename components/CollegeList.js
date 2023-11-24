@@ -11,7 +11,7 @@ const CollegeList = () => {
     useEffect(() => {
         const getColleges = async () => {
             try {
-                const res = await fetch(`${apiUrl}/api/colleges`, {
+                const res = await fetch(`/api/colleges`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {

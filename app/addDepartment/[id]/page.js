@@ -14,7 +14,7 @@ const AddDepartmentByCollege = ({ params }) => {
     useEffect(() => {
         const getColleges = async (id) => {
             try {
-                const res = await fetch(`${apiUrl}/api/colleges/${id}`, {
+                const res = await fetch(`/api/colleges/${id}`, {
 
                     cache: 'no-store',
                 })
@@ -53,7 +53,7 @@ const AddDepartmentByCollege = ({ params }) => {
         }
 
         try {
-            const res = await fetch(`${apiUrl}/api/department`, {
+            const res = await fetch(`/api/department`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",

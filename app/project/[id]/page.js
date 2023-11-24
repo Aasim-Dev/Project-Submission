@@ -23,7 +23,7 @@ const ProjectDetails = ({ params }) => {
     useEffect(() => {
         const getCord = async (id) => {
             try {
-                const res = await fetch(`${apiUrl}/api/projectcoordinator/${id}`, {
+                const res = await fetch(`/api/projectcoordinator/${id}`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -38,7 +38,7 @@ const ProjectDetails = ({ params }) => {
 
         const getHod = async (id) => {
             try {
-                const res = await fetch(`${apiUrl}/api/hod/${id}`, {
+                const res = await fetch(`/api/hod/${id}`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -53,7 +53,7 @@ const ProjectDetails = ({ params }) => {
 
         const getDept = async (id) => {
             try {
-                const res = await fetch(`${apiUrl}/api/department/${id}`, {
+                const res = await fetch(`/api/department/${id}`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -68,7 +68,7 @@ const ProjectDetails = ({ params }) => {
 
         const getProject = async (id) => {
             try {
-                const res = await fetch(`${apiUrl}/api/project/${id}`, {
+                const res = await fetch(`/api/project/${id}`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -93,7 +93,7 @@ const ProjectDetails = ({ params }) => {
         }
         const getStudents = async (id) => {
             try {
-                const res = await fetch(`${apiUrl}/api/student/${id}/detail`, {
+                const res = await fetch(`/api/student/${id}/detail`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -108,7 +108,7 @@ const ProjectDetails = ({ params }) => {
 
         const getTasks = async (id) => {
             try {
-                const res = await fetch(`${apiUrl}/api/task/${id}/detail`, {
+                const res = await fetch(`/api/task/${id}/detail`, {
                     cache: 'no-store',
                 })
                 if (!res.ok) {
@@ -142,7 +142,7 @@ const ProjectDetails = ({ params }) => {
         }
 
         try {
-            const res = await fetch(`${apiUrl}/api/project/${id}`, {
+            const res = await fetch(`/api/project/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",

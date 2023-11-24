@@ -22,7 +22,7 @@ function AddNotification() {
         }
 
         try {
-            const res = await fetch(`${apiUrl}/api/notification`, {
+            const res = await fetch(`/api/notification`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
