@@ -5,11 +5,11 @@ import styles from "../page.module.css"
 
 const Downloads = () => {
     const handleDownload = () => {
-        window.location.href = "./ipfs.txt"
+        window.location.href = "https://www.iist.ac.in/sites/default/files/projectinternship/Internship%20Report%20Format.pdf"
         window.location.download = "Project_Report"
     }
     const handleDownloadT = () => {
-        window.location.href = "./smart.txt"
+        window.location.href = "https://www.slideshare.net/ramesh_x/presentation-on-project-report"
         window.location.download = "Project_PPT"
     }
     const handleDownloadI = () => {

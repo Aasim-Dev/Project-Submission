@@ -67,8 +67,8 @@ const Notifications = () => {
         <div className="container px-5 my-auto" style={{ height: "90vh" }}>
             <div className="row px-5 py-2 d-flex justify-content-center">
                 <div className="col-xl-8 d-flex justify-content-between align-items-center">
-                    <h3 className="mt-4 py-2 fw-bolder">Notifications</h3>
-                    <Link href={`/addNotification`} className="btn btn-primary rounded">Add Notification</Link>
+                    <h3 className="mt-4 py-2 fw-bolder">Announcement</h3>
+                    <Link href={`/addNotification`} className="btn btn-primary rounded">Add Announcement</Link>
                 </div>
             </div>
             <Suspense fallback={<Loading />}>
@@ -85,7 +85,7 @@ const Notifications = () => {
                                     </div>
                                 </li>
                             ))}
-                        </ul>) : (<h4>No Notifications</h4>)}
+                        </ul>) : (<h4>No Announcement</h4>)}
 
                     </div>
                 </div>

@@ -126,7 +126,7 @@ const AddProjectByDept = ({ params }) => {
                                         value={project_intro}
                                         type="text"
                                         placeholder="Enter Project Introduction..." />
-                                    <label htmlFor="project_intro">Project Introduction</label>
+                                    <label htmlFor="project_intro">Git Hub Link </label>
                                 </div>
                                 <div className="form-floating mb-3">
                                     <input
